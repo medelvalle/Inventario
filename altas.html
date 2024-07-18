@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agregar producto 🚀</title>
     <link rel="stylesheet" href="./static/css/estilos.css">
+    <script scr="./static/js/altas.js"></script>
 </head>
 <body>
     <header>
         <nav class="navbar-index ">
-            <img class="logo-nav" src="./static/imagenes/logo_bd.png" alt="logo agencia de aprendizaje">
+            <img class="logo-nav" src="./static/imagenes/logo_bd.png" alt="logo de bases de datos">
         </nav>
     </header>
     <div class="logo-centrado">
@@ -34,61 +35,6 @@
 
         <button type="submit">Agregar Producto</button><a href="index.html">Menu principal</a>
     </form><br>
-<!-- <script scr="altas.js"></script> 
-Al probar en produccion cambiar esta linea:
-const URL = "http://127.0.0.1:5000/"
-Por esta línea:
-const URL = "https://USUARIO.pythonanywhere.com/"
--->
-<!--
-    <script>
-        const URL = "https://medelvalle81.pythonanywhere.com/"
-
-//Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-//const URL = "https://USUARIO.pythonanywhere.com/"
-
-// Capturamos el evento de envío del formulario
-        document.getElementById('formulario').addEventListener('submit', function (event) {
-            event.preventDefault(); // Evitamos que se recargue la pagina al enviar el form 
-            var formData = new FormData(this);
-            // Realizamos la solicitud POST al servidor
-            fetch(URL + 'productos', {
-                method: 'POST',
-                body: formData // Aquí enviamos formData. Dado que formData puede contener archivos, no se utiliza JSON.
-            })
-            //Después de realizar la solicitud POST, se utiliza el método then() para manejar la respuesta del servidor.
-            .then(function (response) {
-                    if (response.ok) { 
-            //Si la respuesta es exitosa, convierte los datos de la respuesta a formato JSON.
-                    return response.json(); 
-                    } else {
-            // Si hubo un error, lanzar explícitamente una excepción
-            // para ser "catcheada" más adelante
-                        throw new Error('Error al agregar el producto.');
-                    }
-            })
-
-                //Respuesta OK, muestra una alerta informando que el producto se agregó correctamente y limpia los campos del formulario para que puedan ser utilizados para un nuevo producto.
-                .then(function (data) {
-                    alert('Producto agregado correctamente.');
-                })
-                // En caso de error, mostramos una alerta con un mensaje de error.
-
-
-                .catch(function (error) {
-                    alert('Error al agregar el producto.');
-                })
-                // Limpiar el formulario en ambos casos (éxito o error)
-                .finally(function () {
-                    document.getElementById('descripcion').value = "";
-                    document.getElementById('cantidad').value = "";
-                    document.getElementById('precio').value = "";
-                    document.getElementById('imagenProducto').value = "";
-                    document.getElementById('proveedorProducto').value ="";
-                });
-        })
-    </script>
-    -->
 </body>
 </html>
 
